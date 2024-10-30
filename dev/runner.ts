@@ -56,7 +56,7 @@ async function wrappedRun() {
       }
 
       try {
-        await run(process.env.DIALECT);
+        await run();
       } catch (error) {
         logRed('Sequelize 7 test failed');
         logRed(error);

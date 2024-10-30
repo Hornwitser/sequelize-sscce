@@ -10,11 +10,10 @@ export const testingOnDialects = new Set(['mssql', 'sqlite', 'mysql', 'mariadb',
 // You can delete this file if you don't want your SSCCE to be tested against Sequelize 7
 
 // Your SSCCE goes inside this function.
-export async function run(dialect: DialectName) {
+export async function run() {
   // This function should be used instead of `new Sequelize()`.
   // It applies the config for your SSCCE to work on CI.
   const sequelize = createSequelize7Instance({
-    dialect,
     logQueryParameters: true,
     benchmark: true,
     define: {
