@@ -61,7 +61,7 @@ npm install pg-hstore
 
 # Start the postgres database using docker.
 # Requires docker. You can also run your own database if you prefer.
-npm run start:postgres
+npm run start-postgres-latest
 
 # run the sscce!
 npm run test:postgres
@@ -69,7 +69,7 @@ npm run test:postgres
 npm run test:postgres-native
 
 # Remember to stop the docker container once you're done.
-npm run stop:postgres
+npm run stop-postgres
 ```
 
 #### mariadb
@@ -80,13 +80,13 @@ npm install mariadb @sequelize/mariadb
 
 # Start the mariadb database using docker.
 # Requires docker. You can also run your own database if you prefer.
-npm run start:mariadb
+npm run start-mariadb
 
 # run the sscce!
 npm run test:mariadb
 
 # Remember to stop the docker container once you're done.
-npm run stop:mariadb
+npm run stop-mariadb
 ```
 
 #### mysql
@@ -97,13 +97,13 @@ npm install mysql2 @sequelize/mysql
 
 # Start the mysql database using docker.
 # Requires docker. You can also run your own database if you prefer.
-npm run start:mysql
+npm run start-mysql-latest
 
 # run the sscce!
 npm run test:mysql
 
 # Remember to stop the docker container once you're done.
-npm run stop:mysql
+npm run stop-mysql
 ```
 
 #### mssql (SQL Server)
@@ -114,13 +114,13 @@ npm install tedious @sequelize/mssql
 
 # Start the mssql database using docker.
 # Requires docker. You can also run your own database if you prefer.
-npm run start:mssql
+npm run start-mssql-latest
 
 # run the sscce!
 npm run test:mssql
 
 # Remember to stop the docker container once you're done.
-npm run stop:mssql
+npm run stop-mssql
 ```
 
 ### Step 3 - Commit your SSCCE & sent it to us
