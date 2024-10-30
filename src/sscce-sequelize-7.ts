@@ -23,15 +23,15 @@ export async function run() {
   });
 
   class Foo extends Model<InferAttributes<Foo>, InferCreationAttributes<Foo>> {
-    @Attribute(DataTypes.TEXT)
+    @Attribute(DataTypes.STRING(100))
     @PrimaryKey
     declare name: string;
 
-    @Attribute(DataTypes.TEXT)
+    @Attribute(DataTypes.STRING(100))
     @PrimaryKey
     declare rank: string;
 
-    @Attribute(DataTypes.TEXT)
+    @Attribute(DataTypes.STRING(100))
     declare role: CreationOptional<string>;
   }
 
@@ -48,7 +48,7 @@ export async function run() {
 
   // Altering an unrelated column should not change the above behaviour
   await Foo.truncate();
-  await sequelize.queryInterface.changeColumn("Foos", "role", { type: DataTypes.INTEGER });
+  await sequelize.queryInterface.changeColumn("Foos", "role", { type: DataTypes.TEXT });
   await expect(Foo.create({ name: "bear", rank: "novice" })).to.eventually.be.fulfilled;
   await expect(Foo.create({ name: "bear", rank: "expert" })).to.eventually.be.fulfilled;
   await expect(Foo.create({ name: "dog", rank: "expert" })).to.eventually.be.fulfilled;
