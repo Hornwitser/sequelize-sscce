@@ -11,7 +11,7 @@ elif [ "$DIALECT" = "mysql" ]; then
 elif [ "$DIALECT" = "mariadb" ]; then
   yarn add mariadb@^2 @sequelize/mariadb --ignore-engines;
 elif [ "$DIALECT" = "sqlite" ]; then
-  yarn add sqlite3@^5 @sequelize/sqlite --ignore-engines;
+  yarn add sqlite3@^5 @sequelize/sqlite3 --ignore-engines;
 elif [ "$DIALECT" = "mssql" ]; then
   yarn add tedious@^8 @sequelize/mssql --ignore-engines;
 fi
