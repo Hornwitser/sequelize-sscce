@@ -1,4 +1,4 @@
-import { CreationOptional, DataTypes, InferAttributes, InferCreationAttributes, Model } from '@sequelize/core';
+import { CreationOptional, DataTypes, DialectName, InferAttributes, InferCreationAttributes, Model } from '@sequelize/core';
 import { Attribute, PrimaryKey } from '@sequelize/core/decorators-legacy';
 import { createSequelize7Instance } from '../dev/create-sequelize-instance';
 import { expect } from 'chai';
@@ -10,10 +10,11 @@ export const testingOnDialects = new Set(['mssql', 'sqlite', 'mysql', 'mariadb',
 // You can delete this file if you don't want your SSCCE to be tested against Sequelize 7
 
 // Your SSCCE goes inside this function.
-export async function run() {
+export async function run(dialect: DialectName) {
   // This function should be used instead of `new Sequelize()`.
   // It applies the config for your SSCCE to work on CI.
   const sequelize = createSequelize7Instance({
+    dialect,
     logQueryParameters: true,
     benchmark: true,
     define: {
