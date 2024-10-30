@@ -11,5 +11,5 @@ export function createSequelize7Instance(options?: Omit<Sequelize7Options<Abstra
   // not compatible with node 10
   const { Sequelize: Sequelize7Constructor } = require('@sequelize/core');
   // @ts-expect-error -- wrapOptions expect sequelize 6.
-  return new Sequelize7Constructor(wrapOptions(options));
+  return new Sequelize7Constructor(wrapOptions(options, true));
 }
