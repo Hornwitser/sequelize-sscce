@@ -77,7 +77,7 @@ export const CiDbConfigsV7 = {
     authentication: {
       type: 'default',
       options: {
-        username: env.SEQ_MSSQL_USER || env.SEQ_USER || 'SA',
+        userName: env.SEQ_MSSQL_USER || env.SEQ_USER || 'SA',
         password: env.SEQ_MSSQL_PW || env.SEQ_PW || 'Password12!',
       },
     },
